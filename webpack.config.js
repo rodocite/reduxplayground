@@ -20,12 +20,17 @@ module.exports = {
         test: /\.jsx$/,
         exclude: /node_modules/,
         loaders: ['babel-loader'],
+      },
+      {
+        test: /\.scss$/,
+        exclude: /node_modules/,
+        loader: 'style!css!sass',
       }
     ]
   },
 
   resolve: {
-    extensions: ['', '.js', '.jsx'],
+    extensions: ['', '.js', '.jsx', '.scss'],
     modulesDirectories: ['node_modules'],
   },
 

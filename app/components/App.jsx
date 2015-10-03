@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { submitMessage } from '../actions/actions';
+import '../styles/component_styles/App';
 
 class App extends React.Component {
   constructor(props) {
@@ -17,16 +18,23 @@ class App extends React.Component {
 
   render() {
     const { messages } = this.props;
-    const messageList = messages.map((message, index) => <li key={index}>{message}</li>);
+    const messageList = messages.map((message, index) => <li key={index} className='message'>{message}</li>);
     return (
-      <div>
-        <ul>{messageList}</ul>
-          <input type='text' ref='input'
+      <div className='container'>
+        <ul className='messageList'>{messageList}</ul>
+          <input
             onKeyDown={e => {
               if(e.keyCode === 13) this.handleClick(e);
             }}
+            type='text'
+            placeholder='Say something...'
+            ref='input'
+            className='inputBox'
           />
-          <button onClick={e => this.handleClick(e)}>
+          <button
+            onClick={e => this.handleClick(e)}
+            className='chatButton'
+            >
             Submit Message
           </button>
       </div>
