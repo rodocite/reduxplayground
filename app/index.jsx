@@ -4,7 +4,7 @@ import { createStore } from 'redux';
 import App from './components/App';
 import { Provider } from 'react-redux';
 import messageApp from './reducers/reducers';
-let store = createStore(messageApp);
+import { store } from './store/store';
 
 React.render(
   <Provider store={store}>
