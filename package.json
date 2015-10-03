@@ -12,6 +12,7 @@
   "dependencies": {
     "react": "^0.13.3",
     "react-redux": "^3.0.1",
+    "reactfire": "^0.5.1",
     "redux": "^3.0.2"
   },
   "devDependencies": {

@@ -1,0 +1,9 @@
+{
+  "firebase": "YOUR_FIREBASE_HERE",
+  "public": "public",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}

@@ -1,4 +1,4 @@
-import { MESSAGE, submitMessage } from '../actions/actions';
+import { MESSAGE, STATE, hydrateState, submitMessage } from '../actions/actions';
 
 const initialState = {
   messages: [],
@@ -6,13 +6,20 @@ const initialState = {
 
 const messageApp = (state = initialState, action) => {
   switch(action.type) {
-    case 'MESSAGE':
+    case 'STATE':
       return Object.assign({}, state, {
+        messages: action.state,
+      });
+
+    case 'MESSAGE':
+      const data = Object.assign({}, state, {
         messages: [
           ...state.messages,
           action.message,
         ]
       });
+      ref.set(data);
+      return data;
 
     default:
       return state;

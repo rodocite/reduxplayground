@@ -1,10 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { submitMessage } from '../actions/actions';
+import { submitMessage, hydrateState } from '../actions/actions';
+import Firebase from 'firebase';
+const ref = new Firebase("https://reduxplayground.firebaseio.com/");
 
 class App extends React.Component {
   constructor(props) {
     super(props);
+    const { dispatch } = this.props;
+    ref.child('messages').once('value', snapshot => dispatch(hydrateState(snapshot.val())));
   }
 
   handleClick(e) {
