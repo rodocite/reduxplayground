@@ -1,5 +1,5 @@
 {
-  "firebase": "YOUR_FIREBASE_HERE",
+  "firebase": "reduxplayground",
   "public": "public",
   "ignore": [
     "firebase.json",

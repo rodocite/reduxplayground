@@ -8,7 +8,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     const { dispatch } = this.props;
-    ref.child('messages').once('value', snapshot => dispatch(hydrateState(snapshot.val())));
+    ref.child('messages').on('value', snapshot => dispatch(hydrateState(snapshot.val())));
   }
 
   handleClick(e) {

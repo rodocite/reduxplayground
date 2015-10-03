@@ -1,4 +1,6 @@
 import { MESSAGE, STATE, hydrateState, submitMessage } from '../actions/actions';
+import Firebase from 'firebase';
+const ref = new Firebase("https://reduxplayground.firebaseio.com/");
 
 const initialState = {
   messages: [],
