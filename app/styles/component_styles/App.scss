@@ -1,5 +1,4 @@
 @import "../config/config.scss";
-
 .container {
   padding-top: 10em;
   display: flex;
@@ -8,22 +7,47 @@
   justify-content: center;
   -webkit-animation: fadein 2.5s ease-in;
 }
-
 .messageList {
-  padding-right: 0em;
+  padding-right: 0;
   align-self: center;
   list-style-type: none;
   font-family: $font-montserrat;
   font-size: 30px;
   color: $brand-primary;
 }
-
 .message {
-  padding-bottom: .5em;
-  -webkit-animation: fadein .5s ease-in;
+  padding-bottom: 0.5em;
+  -webkit-animation: fadein 0.5s ease-in;
 }
-
-.chatButton { width: 15vw;height: 44px; border: 0; background: $brand-tertiary; font-size: 12px; font-weight: 700; text-transform: uppercase; color: $brand-text;   -webkit-animation: fadein 2s ease-in;
+.chatButton {
+  width: 15vw;
+  height: 44px;
+  border: 0;
+  background: $brand-tertiary;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $brand-text;
+  -webkit-animation: fadein 2s ease-in;
 }
-.inputBox { -ms-flex-preferred-size: 26px; display: block; background: none; width: 20em; margin: 0 0 16px; padding: 2px; border-width: 0 0 1px 0; line-height: 26px; border-radius: 0; font-size: 16px; color: $brand-primary;   -webkit-animation: fadein 1s ease-in;}
-.inputBox:focus { outline:none; border-bottom: 1px solid $brand-highlight; -webkit-transform: scaleX(1); -ms-transform: scaleX(1); transform: scaleX(1);}
+.inputBox {
+  -ms-flex-preferred-size: 26px;
+  display: block;
+  background: none;
+  width: 20em;
+  margin: 0 0 16px;
+  padding: 2px;
+  border-width: 0 0 1px 0;
+  line-height: 26px;
+  border-radius: 0;
+  font-size: 16px;
+  color: $brand-primary;
+  -webkit-animation: fadein 1s ease-in;
+}
+.inputBox:focus {
+  outline: none;
+  border-bottom: 1px solid $brand-highlight;
+  -webkit-transform: scaleX(1);
+  -ms-transform: scaleX(1);
+  transform: scaleX(1);
+}
