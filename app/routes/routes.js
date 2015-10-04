@@ -4,8 +4,8 @@ import App from '../components/App';
 import mock from '../components/mock';
 
 export default (
-	<Route name='app' path='/' handler={mock}>
-		<DefaultRoute handler={App} />
-		<NotFoundRoute handler={App} />
-	</Route>
+  <Route name='app' path='/' handler={mock}>
+    <DefaultRoute handler={App} />
+    <NotFoundRoute handler={App} />
+  </Route>
 )
